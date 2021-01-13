@@ -13,6 +13,7 @@ This program is responsible for automating the alignment process of large micro
 
 # Multi-Round Pixel Decoder: 
 This algorithm is responsible for identifying transcripts that display spatial expression patterns. It uses the starfish package in python. The program requires customizing accurate identification of transcript boundaries. It localizes and decodes transcript molecules, finding spots by fitting the local intensity maxima. It then decodes every pixel and combines these pixel values to map a spots/gene targets with an expected intensity using the skimage.measure.label() and skimage.measure.regionprops(), which also gives back spot locations and attributes.
+
 This approach accurately detected spots which can be advantageous when working with dense data. However in our data, it also ended up decoding noise in images, which was addressed by incorporating a size threshold for the spots/gene targets in the images, labeled in the program as the "min_area" and "max_area". 
 
 The decoded data is saved in a decoded-intensity-table, which showcases the outputs of the ImageStack in a table with spot locations, intensities, and sizes. The program also uses a codebook which can be customized based on experiment. It contains maps of expected intensities across multiple image rounds to the spot/gene targets that are encoded and mapping of channels to the integer indices that are used to represent them.
