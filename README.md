@@ -1,7 +1,7 @@
 # Computational omics pipeline for analyzing spatial transcriptomics
 
 # Background: 
-High resolution molecular imaging with high accuracy is a growing challenge as it can be hindered by sizes of large datasets, limits in optical resolution and density of transcripts in single cells. These python programs are designed to help in the method for optimizing the image processing for such in-situ sequencing genomic data. 
+High resolution molecular imaging with high accuracy is a growing challenge as it can be hindered by sizes of large datasets, limits in optical resolution and density of transcripts in single cells. These python programs were designed to help in the method for optimizing the image processing for such in-situ sequencing genomic data. 
 
 # *Multi-Channel-Deconvolution:*
 This program is responsible for deconvoluting very large images that don't fit GPU ram requirements. It opens images, breaks the images into manageable chunks to fit into GPU ram requirements, performs deconvolution and stitches the images back together.
